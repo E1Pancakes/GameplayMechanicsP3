@@ -21,4 +21,5 @@ public class Enemy : MonoBehaviour
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         enemyRb.AddForce(lookDirection * speed);
     }
+   
 }
