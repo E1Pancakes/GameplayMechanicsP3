@@ -203,6 +203,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fd5555088952419ebf0eb82e9096fa5, type: 3}
+--- !u!1 &278862888 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5168315691904313405, guid: 32e8ca15682e331478a43d51fc21f9a5, type: 3}
+  m_PrefabInstance: {fileID: 6815753579345382554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &313710503
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +237,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4938626769ff4fa40828e3e389fa69c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemeyPrefab: {fileID: 8708284383574331455, guid: 82aac0a1ea5c59544b28982598a4b247, type: 3}
+  enemyPrefab:
+  - {fileID: 8708284383574331455, guid: 82aac0a1ea5c59544b28982598a4b247, type: 3}
+  - {fileID: 8708284383574331455, guid: 5f2e222f9b0775745a74b9a2bc2265a9, type: 3}
+  enemyCount: 0
+  waveNumber: 1
+  powerupPrefab: {fileID: 278862888}
 --- !u!4 &313710505
 Transform:
   m_ObjectHideFlags: 0
@@ -505,6 +515,10 @@ PrefabInstance:
     - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_Name
       value: Powerup Indecator
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalScale.x
@@ -782,6 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hasPowerup: 0
   powerupIndicator: {fileID: 1832497208}
 --- !u!54 &1426193032
 Rigidbody:
@@ -825,7 +840,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5168315691904313405, guid: 32e8ca15682e331478a43d51fc21f9a5, type: 3}
       propertyPath: m_Name
-      value: Gem_01
+      value: Powerup
       objectReference: {fileID: 0}
     - target: {fileID: 5381009164442690752, guid: 32e8ca15682e331478a43d51fc21f9a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -866,6 +881,10 @@ PrefabInstance:
     - target: {fileID: 5381009164442690752, guid: 32e8ca15682e331478a43d51fc21f9a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110722512078306066, guid: 32e8ca15682e331478a43d51fc21f9a5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
